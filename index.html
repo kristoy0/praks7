@@ -4,8 +4,9 @@
 </head>
     <body>
         <h1>Kaalu teisendamine</h1>
+        <button id="nightToggle">Nightmode</button>
         <form action="">
-            <input type="number" placeholder="Sisesta kaal kilogrammides..." id="kgInput" min="0">
+            <input type="number" placeholder="Sisesta kaal kilogrammides..." id="kgInput" min="0" oninput="this.value = this.value.slice(0, 10)">
         </form>
         <table id="output">
             <tr>
