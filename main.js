@@ -7,7 +7,6 @@ let output = document.getElementById('output');
 let nightToggle = document.getElementById('nightToggle');
 let body = document.querySelector('body');
 
-let nightOn = false;
 output.style.visibility = 'hidden';
 
 // Listening to events
@@ -22,13 +21,5 @@ kgInput.addEventListener('input', event => {
 });
 
 nightToggle.addEventListener('click', event => {
-    nightOn = !nightOn;
-    
-    if (nightOn) {
-        body.style.backgroundColor = 'black';
-        body.style.color = 'white';
-    } else {
-        body.style.backgroundColor = 'white';
-        body.style.color = 'black';
-    }
+    body.classList.toggle('bg');
 })
